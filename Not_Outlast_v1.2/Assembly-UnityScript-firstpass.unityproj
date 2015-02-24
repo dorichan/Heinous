@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{D394A8ED-FB93-A4EE-9867-F6E3C159F9B5}</ProjectGuid>
+	<ProjectGuid>{44356382-4F32-87CE-D04D-8EE3C4FEC963}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,22 +39,22 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
-     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
-     <None Include="Assets\HorrorEnvironment_AbandonedManor\Shaders\Glass-Stained-BumpDistort.shader" />
-     <None Include="Assets\HorrorEnvironment_AbandonedManor\Shaders\rimShader_simple.shader" />
-     <None Include="Assets\HorrorEnvironment_AbandonedManor\Shaders\rimShader_specular.shader" />
-     <None Include="Assets\HorrorEnvironment_AbandonedManor\Shaders\rimShaderSpecEmi.shader" />
-     <None Include="Assets\HorrorEnvironment_AbandonedManor\Shaders\rimShader_dust.shader" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <None Include="Assets\Dori\HorrorEnvironment_AbandonedManor\Shaders\Glass-Stained-BumpDistort.shader" />
+     <None Include="Assets\Dori\HorrorEnvironment_AbandonedManor\Shaders\rimShader_simple.shader" />
+     <None Include="Assets\Dori\HorrorEnvironment_AbandonedManor\Shaders\rimShader_specular.shader" />
+     <None Include="Assets\Dori\HorrorEnvironment_AbandonedManor\Shaders\rimShaderSpecEmi.shader" />
+     <None Include="Assets\Dori\HorrorEnvironment_AbandonedManor\Shaders\rimShader_dust.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

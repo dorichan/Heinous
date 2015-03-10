@@ -10,6 +10,13 @@ public class RiddleStart : MonoBehaviour
 		riddleStart = false;
 	}
 
+	void Update()
+	{
+		if (riddleStart) {
+
+		}
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject.tag == "Player") {

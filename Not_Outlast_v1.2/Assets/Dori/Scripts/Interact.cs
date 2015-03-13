@@ -3,24 +3,42 @@ using System.Collections;
 
 public class Interact : MonoBehaviour 
 {
-	public int clueCount;
 	public bool isNearClue;
+	public GameObject nearObj;
+	private RiddleMain rm;
+
+	void Awake()
+	{
+		rm = GameObject.FindGameObjectWithTag ("RiddleMain").GetComponent<RiddleMain> ();
+	}
 
 	void Start()
 	{
-		clueCount = 0;
 		isNearClue = false;
+		nearObj = null;
 	}
 
 	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.E) && isNearClue) {
-			RaycastHit hit;
-			if(Physics.Raycast(transform.position, Vector3.forward, out hit)) {
-				if(hit.transform.gameObject.tag == "Clue") {
-					clueCount += 1;
-				}
-			}
+			rm.collected.Add(nearObj);
+			nearObj.SetActive (false);
+			nearObj = null;
+			isNearClue = false;
+		}
+	}
+
+	void OnTriggerEnter(Collider other) 
+	{
+		if (other.gameObject.tag == "Collect") {
+			nearObj = other.gameObject;
+		}
+	}
+
+	void OnTriggerExit(Collider other) 
+	{
+		if (other.gameObject.tag == "Collect") {
+			nearObj = null;
 		}
 	}
 }

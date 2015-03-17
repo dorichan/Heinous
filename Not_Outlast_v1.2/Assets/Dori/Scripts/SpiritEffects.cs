@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiritLight : MonoBehaviour 
+public class SpiritEffects : MonoBehaviour 
 {
 	public Flashlight player;
 	public ParticleSystem ps;

@@ -1,2 +1,3 @@
-# NotOutlast
-Advanced Level Design Repo
+# Heinous
+
+*A first person horror game.*

@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Dori/Scripts/RiddleDrawings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Dori\Scripts\CameraShake.cs">
     <Files>
-      <File FileName="Assets/Dori/Scripts/RiddleDrawings.cs" Line="18" Column="3" />
-      <File FileName="Assets/Dori/Scripts/RiddleStart.cs" Line="1" Column="1" />
+      <File FileName="Assets\Dori\Scripts\RiddleMain.cs" Line="45" Column="23" />
+      <File FileName="Assets\Dori\Scripts\Interact.cs" Line="27" Column="23" />
+      <File FileName="Assets\Dori\Scripts\Collectable.cs" Line="26" Column="2" />
+      <File FileName="Assets\Dori\Scripts\CameraShake.cs" Line="19" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

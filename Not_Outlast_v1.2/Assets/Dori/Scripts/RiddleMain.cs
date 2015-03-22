@@ -11,12 +11,14 @@ public class RiddleMain : MonoBehaviour
 	private bool riddleStart;
 	private bool riddleEnd;
 	private CameraShake cs;
+	private followPlayer fp;
 
 	public List<GameObject> collected = new List<GameObject>();
 
 	void Awake()
 	{
 		cs = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<CameraShake> ();
+		fp = GameObject.FindGameObjectWithTag ("Spirit").GetComponent<followPlayer> ();
 	}
 
 	void Start()
@@ -24,6 +26,7 @@ public class RiddleMain : MonoBehaviour
 		index = 0;
 		hasSolved = false;
 		riddleStart = false;
+		fp.delay = true;
 	}
 
 	void Update()
@@ -36,6 +39,7 @@ public class RiddleMain : MonoBehaviour
 
 		if (riddleEnd) {
 			cs.DoShake();
+			fp.delay = false;
 
 			counter += 1.0f * Time.deltaTime;
 

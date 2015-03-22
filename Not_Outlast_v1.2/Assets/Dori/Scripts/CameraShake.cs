@@ -7,12 +7,16 @@ public class CameraShake : MonoBehaviour
 	private float shakeDecay;
 	public float shakeIntensity;
 	private Quaternion originalRotation;
-	private int index;
+	private MouseLook player;
+
+	void Awake()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<MouseLook> ();
+	}
 	
 	void Start () 
 	{
 		isShaking = false;
-		index = 0;
 	}
 
 	void Update () 
@@ -28,24 +32,16 @@ public class CameraShake : MonoBehaviour
 
 	public void DoShake()
 	{
-		if (index == 0) {
-			SaveCurrentRotation ();
-		}
-
-		shakeIntensity = 1.5f * Time.deltaTime;
-		shakeDecay = 0.3f * Time.deltaTime;
-		isShaking = true;
-	}
-
-	void SaveCurrentRotation()
-	{
-		index += 1;
-		Debug.Log (originalRotation);
+		player.enabled = false;
 		originalRotation = transform.rotation;
+		shakeIntensity = 0.1f * Time.deltaTime;
+		shakeDecay = 0.03f * Time.deltaTime;
+		isShaking = true;
 	}
 
 	public void StopShake()
 	{
+		player.enabled = true;
 		transform.rotation = originalRotation;
 
 		Debug.Log (transform.rotation);

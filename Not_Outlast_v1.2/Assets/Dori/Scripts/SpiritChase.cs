@@ -25,7 +25,8 @@ public class SpiritChase : MonoBehaviour
 		if (direction.magnitude > chaseDistance) {
 			Vector3 moveVector = direction.normalized * speed;
 			gameObject.transform.position += moveVector;
-			transform.LookAt(target.transform);
+			//gameObject.transform.rotation = Quaternion.LookRotation(moveVector);
+
 		}
 	}
 }

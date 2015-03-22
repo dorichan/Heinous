@@ -11,7 +11,7 @@ public class SpiritEffects : MonoBehaviour
 		ps = GetComponent<ParticleSystem> ();
 	}
 
-	void OnTriggerStay(Collider other) {
+	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player") {
 			player.SendMessage("FlickerOn");
 			ps.startSize = 3f;	
